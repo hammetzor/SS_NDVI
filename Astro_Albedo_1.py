@@ -4,7 +4,17 @@
 # In[17]:
 
 
-''' It is not finish 
+'''
+Hello,
+
+This is the albedo code that we were not able to adapt to image files. Do not try to run this code because it does not work. 
+We tried to use it to quantify the light reflection in some images (namely the images with the pollution in the USA).
+
+Best regards,
+SixSense
+'''
+
+
 %matplotlib notebook
 latslider = IntSlider(value=0, min=-90, max=90, step=1, description='Lat:')
 doy  = np.array([i for i in range(1, 366)])
