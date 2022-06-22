@@ -18,9 +18,10 @@ def display(image, image_name):
     cv2.destroyAllWindows()
 
 def contrast_stretch(im):
-    in_min = np.percentile(im, 1)     #find the best values for the NDVI calculation
-    in_max = np.percentile(im, 99)
-
+    in_min = np.percentile(im, 1)       #we changed the min and max values of pixels' brightness to find the best ones for the NDVI calculation, considering the differences of the light intensity in each image.
+    in_max = np.percentile(im, 99)      #we used the values 1 - 99 on the Cape Verde islands image, because the differences of light intensity were lower, so we needed a bigger range of pixels' contrast.
+                                        #we used the values 8 - 80 on the USA image, because the differences of the light intensity were higher, so we needed a smaller range of pixels' contrast.
+    
     out_min = 0.0
     out_max = 255.0
 
